@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/svg/controle.svg">
+    <link rel="stylesheet" href="./css/profile.css">
+    <script src="./js/localStorage.js"></script>
+    <script src="./js/profile.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Games Review</title>
+</head>
+<body>
+    <!--Sombreamentos-->
+    <div id="shadow"></div>
+
+    <!-- Conteúdo principal -->
+    <header>
+        <nav class="navBar">
+            <a href="./index.html">
+                <div class="logo">
+                    <img class="svg" src="./assets/svg/controle.svg" alt="Logo de um controle">
+                    <h2>GameReview</h2>
+                </div>
+            </a>
+            <form class="searchBox" action="/resultados" method="GET">
+                <div class="searchItems">
+                    <input id="searchField" type="search" name="q" placeholder="Buscar..." aria-label="Buscar">
+                    <img class="svg" src="./assets/svg/lupa.svg" alt="">
+                </div>
+                <div id="searchResults">
+                        <!-- Resultado teste
+                        <h2 class="result">minecraft</h2>
+                        -->
+                </div>
+            </form>
+        </nav>
+    </header>
+    <main>
+        <!-- Seção de dados do perfil -->
+        <section class="perfilData">
+            <h2 id="usernameData">username</h2>
+            <p>Seu histórico de avaliações</p>
+        </section>
+
+        <!-- Seção de editar dados de uma review -->
+        <div id="newReview">
+            <h1>Editando Review</h1>
+            <form id="formNewReview">
+                <input type="number" min="0" max="5" step="0.5" placeholder="Estrelas ⭐ (0 à 5)" class="formInput" id="avaliacaoReview">
+                <input required type="text" placeholder="Review" class="formInput" id="textReview">
+                <input type="submit" value="Enviar" class="formButton">
+            </form>
+        </div>
+    
+        <!-- Seção de reviews -->
+        <section class="reviews">
+            <div id="noReviews">
+                <img class="svg" src="./assets/svg/simbolo X.svg" alt="">
+                <h4>Ainda não foram publicadas reviews...</h4>
+            </div>
+            <div id="cards">
+    
+                <!-- Reviews de exemplo -->
+                
+        
+                <!--
+                <div class="cardBox" id="00">
+                    <img class="pictureCard" src="./assets/games-pictures/minecraft.png" alt="">
+                    <div class="infosCard">
+                        <h4>Nome do jogo</h4>
+                        <div class="userTextReview">
+                            <img class="usernameReview" src="./assets/svg/usuario.svg" alt="">
+                            <h5>usuario</h5>
+                        </div>
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+                    <div class="ratingBox">
+                        <div>
+                            <h2>x/5.0</h2>
+                            <img class="svg" src="./assets/svg/estrela.svg" alt="">    
+                        </div>
+                        <div class="pointerDiv">
+                            <img class="svg edit" src="./assets/svg/editar.svg" alt="">
+                            <img class="svg exclude" src="./assets/svg/lixo.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                -->
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="logo">
+            <img class="svg" src="./assets/svg/controle.svg" alt="">
+            <h2>GameReview</h2>
+        </div>
+        <div class="socials">
+            <img class="svg" src="./assets/svg/whatsapp.svg" alt="">
+            <img class="svg" src="./assets/svg/xtwitter.svg" alt="">
+            <img class="svg" src="./assets/svg/instagram.svg" alt="">
+        </div>
+    </footer>
+</body>
+</html>

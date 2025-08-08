@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/svg/controle.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/localStorage.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Games Review</title>
+</head>
+<body>
+
+    <!--Sombreamentos-->
+    <div id="login-shadow"></div>
+    <div class="lateral-shadow"></div>
+
+    <!--Caixas de login/logout/cadastro-->
+    <div id="login">
+        <h1>Fazer login</h1>
+        <form id="formLogin">
+            <input required type="text" placeholder="User" class="formInput" id="loginUser">
+            <input required type="password" placeholder="Senha" class="formInput" id="loginSenha">
+            <input type="submit" value="Entrar" class="formButton">
+        </form>
+        <button id="showCadastroBox" class="formButton">Realizar Cadastro</button>
+    </div>
+
+    <div id="logout">
+        <h1 id="logoutText">Olá *usuário*</h1>
+        <a id="ancoraPerfil" href="./profile.html">Meu perfil</a>
+        <button onclick="logoutUser()" class="formButton" id="logoutButton">Sair da conta</button>
+    </div>
+
+    <div id="cadastro">
+        <h1>Realizar Cadastro</h1>
+        <form id="formCadastro">
+            <input required type="text" placeholder="User" class="formInput" id="cadastroUser">
+            <input required type="password" placeholder="Senha" class="formInput" id="cadastroSenha">
+            <input type="submit" value="Cadastrar" class="formButton">
+        </form>
+        <button id="showLoginBox" class="formButton">Realizar Login</button>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <header>
+        <img id="bg-controler" src="./assets/bg-header.webp" alt="Foto de fundo de um controle de vídeogame">
+        
+        <nav class="navBar">
+            <a href="./index.html">
+                <div class="logo">
+                    <img class="svg" src="./assets/svg/controle.svg" alt="Logo de um controle">
+                    <h2>GameReview</h2>
+                </div>
+            </a>
+            <form class="searchBox" action="/resultados" method="GET">
+                <div class="searchItems">
+                    <input id="searchField" type="search" name="q" placeholder="Buscar..." aria-label="Buscar">
+                    <img class="svg" src="./assets/svg/lupa.svg" alt="">
+                </div>
+                <div id="searchResults">
+                        <!-- Resultado teste
+                        <h2 class="result">minecraft</h2>
+                        -->
+                </div>
+            </form>
+            <img id="userLogSvg" class="svg" src="./assets/svg/usuario.svg" alt="Logo de usuário">
+            <h3 id="userLogText">Login / Cadastre-se</h3>
+        </nav>
+    </header>
+
+    <!-- Seção de carrossel -->
+    <section class="picturesCarousel">
+        <h2>Jogos em destaque</h2>
+            <div id="carousel">
+                <a class="picture" href="gamePage.html?game=god of war ragnarok"><img src="./assets/games-pictures/godOfWar.jpeg" alt="god of war ragnarok"></a>
+                <a class="picture" href="gamePage.html?game=gta v"><img src="./assets/games-pictures/gtaV.png" alt="gta v"></a>
+                <a class="picture" href="gamePage.html?game=minecraft"><img src="./assets/games-pictures/minecraft.png" alt="minecraft"></a>
+                <a class="picture" href="gamePage.html?game=red dead redemption 2"><img src="./assets/games-pictures/redDead2.png" alt="red dead redemption 2"></a>
+                <a class="picture" href="gamePage.html?game=rocket league"><img src="./assets/games-pictures/rocketLeague.avif" alt="rocket league"></a>
+                <a class="picture" href="gamePage.html?game=uncharted"><img src="./assets/games-pictures/uncharted.jpeg" alt="uncharted"></a>
+                <a class="picture" href="gamePage.html?game=apex legends"><img src="./assets/games-pictures/apex.jpg" alt="apex legends"></a>
+            </div>
+    </section>
+
+    <!-- Seção de reviews -->
+    <section class="reviews">
+        <h2>Reviews Populares</h2>
+
+        <div id="cards">
+
+            <!-- Reviews de exemplo -->
+            
+            <!--
+            <div id="noReviews">
+                <img class="svg" src="./assets/svg/simbolo X.svg" alt="">
+                <h4>Ainda não foram publicadas reviews...</h4>
+            </div>
+    
+            <div class="cardBox" id="00">
+                    <img class="pictureCard" src="./assets/games-pictures/minecraft.png" alt="">
+                    <div class="infosCard">
+                        <h4>Nome do jogo</h4>
+                        <div class="userTextReview">
+                            <img class="usernameReview" src="./assets/svg/usuario.svg" alt="">
+                            <h5>usuario</h5>
+                        </div>
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+                    <div class="ratingBox">
+                        <div>
+                            <h2>x/5.0</h2>
+                            <img class="svg" src="./assets/svg/estrela.svg" alt="">    
+                        </div>
+                        <div class="pointerDiv">
+                            <img class="svg edit" src="./assets/svg/editar.svg" alt="">
+                            <img class="svg exclude" src="./assets/svg/lixo.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            -->
+            
+
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="logo">
+            <img class="svg" src="./assets/svg/controle.svg" alt="">
+            <h2>GameReview</h2>
+        </div>
+        <div class="socials">
+            <img class="svg" src="./assets/svg/whatsapp.svg" alt="">
+            <img class="svg" src="./assets/svg/xtwitter.svg" alt="">
+            <img class="svg" src="./assets/svg/instagram.svg" alt="">
+        </div>
+    </footer>
+</body>
+</html>

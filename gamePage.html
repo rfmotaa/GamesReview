@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/svg/controle.svg">
+    <link rel="stylesheet" href="./css/gamePage.css">
+    <script src="./js/localStorage.js"></script>
+    <script src="./js/gamePage.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Games Review</title>
+</head>
+<body>
+
+    <!--Sombreamentos-->
+    <div id="login-shadow"></div>
+
+    <!--Caixas de login/logout/cadastro-->
+    <div id="login">
+        <h1>Fazer login</h1>
+        <form id="formLogin">
+            <input required type="text" placeholder="User" class="formInput" id="loginUser">
+            <input required type="password" placeholder="Senha" class="formInput" id="loginSenha">
+            <input type="submit" value="Entrar" class="formButton">
+        </form>
+        <button id="showCadastroBox" class="formButton">Realizar Cadastro</button>
+    </div>
+
+    <div id="logout">
+        <h1 id="logoutText">Olá *usuário*</h1>
+        <a id="ancoraPerfil" href="./profile.html">Meu perfil</a>
+        <button onclick="logoutUser()" class="formButton" id="logoutButton">Sair da conta</button>
+    </div>
+
+    <div id="cadastro">
+        <h1>Realizar Cadastro</h1>
+        <form id="formCadastro">
+            <input required type="text" placeholder="User" class="formInput" id="cadastroUser">
+            <input required type="password" placeholder="Senha" class="formInput" id="cadastroSenha">
+            <input type="submit" value="Cadastrar" class="formButton">
+        </form>
+        <button id="showLoginBox" class="formButton">Realizar Login</button>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <header>
+        <nav class="navBar">
+            <a href="./index.html">
+                <div class="logo">
+                    <img class="svg" src="./assets/svg/controle.svg" alt="Logo de um controle">
+                    <h2>GameReview</h2>
+                </div>
+            </a>
+            <form class="searchBox" action="/resultados" method="GET">
+                <div class="searchItems">
+                    <input id="searchField" type="search" name="q" placeholder="Buscar..." aria-label="Buscar">
+                    <img class="svg" src="./assets/svg/lupa.svg" alt="">
+                </div>
+                <div id="searchResults">
+                        <!-- Resultado teste
+                        <h2 class="result">minecraft</h2>
+                        -->
+                </div>
+            </form>
+            <img id="userLogSvg" class="svg" src="./assets/svg/usuario.svg" alt="Logo de usuário">
+            <h3 id="userLogText">Login / Cadastre-se</h3>
+        </nav>
+    </header>
+
+    <!-- Seção de conteúdo sobre o jogo -->
+    <section class="gameContainer">
+        <img id="mainPicture" src="./assets/games-pictures/minecraft.png" alt="">
+        <div>
+            <div class="topGameContainer">
+                <h1 id="gameName">Nome do jogo</h1>
+                <div class="ratingBox">
+                    <h2 id="rating">x / 5.0</h2>
+                    <img class="svg" src="./assets/svg/estrela.svg" alt="">
+                </div>
+            </div>
+            <p id="textGame">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit fugiat tenetur tempora quas ad eum impedit ut soluta dolor. Vel unde eligendi totam nesciunt, tempore officiis, consectetur nemo nostrum sit, ab vero assumenda. Nesciunt neque explicabo maxime, reiciendis delectus sapiente, ipsum temporibus illum atque dolore assumenda, iste exercitationem quos? Iste illum dolorum commodi obcaecati culpa voluptatibus libero rem enim id officiis sit tempora aspernatur magnam possimus optio repellat, molestias esse praesentium nesciunt quis perferendis molestiae nostrum modi. Perspiciatis, possimus itaque?</p>
+        </div>
+    </section>
+
+    <!-- Botão/Caixa de criar review -->
+    <section>
+        <button id="reviewButton">Deixe sua Review!</button>
+
+        <div id="newReview">
+            <h1>Deixe sua Review!</h1>
+            <form id="formNewReview">
+                <h2 id="nameReview">Jogo</h2>
+                <input type="number" min="0" max="5" step="0.5" placeholder="Estrelas ⭐ (0 à 5)" class="formInput" id="avaliacaoReview">
+                <input required type="text" placeholder="Review" class="formInput" id="textReview">
+                <input type="submit" value="Enviar" class="formButton">
+            </form>
+        </div>
+        
+    </section>
+
+    <!-- Seção de reviews -->
+    <section class="reviewsContainer">
+        <h2>Reviews Populares</h2>
+
+        <div id="cards">
+
+            <!-- Reviews de exemplo -->
+            <!--
+            <div id="noReviews">
+                <img class="svg" src="./assets/svg/simbolo X.svg" alt="">
+                <h4>Ainda não foram publicadas reviews sobre este jogo...</h4>
+            </div>
+    
+            <div class="cardBox" id="00">
+                    <img class="pictureCard" src="./assets/games-pictures/minecraft.png" alt="">
+                    <div class="infosCard">
+                        <h4>Nome do jogo</h4>
+                        <div class="userTextReview">
+                            <img class="usernameReview" src="./assets/svg/usuario.svg" alt="">
+                            <h5>usuario</h5>
+                        </div>
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+                    <div class="ratingBox">
+                        <div>
+                            <h2>x/5.0</h2>
+                            <img class="svg" src="./assets/svg/estrela.svg" alt="">    
+                        </div>
+                        <div class="pointerDiv">
+                            <img class="svg edit" src="./assets/svg/editar.svg" alt="">
+                            <img class="svg exclude" src="./assets/svg/lixo.svg" alt="">
+                        </div>
+                    </div>
+            </div>
+            -->
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="logo">
+            <img class="svg" src="./assets/svg/controle.svg" alt="">
+            <h2>GameReview</h2>
+        </div>
+        <div class="socials">
+            <img class="svg" src="./assets/svg/whatsapp.svg" alt="">
+            <img class="svg" src="./assets/svg/xtwitter.svg" alt="">
+            <img class="svg" src="./assets/svg/instagram.svg" alt="">
+        </div>
+    </footer>
+</body>
+</html>
